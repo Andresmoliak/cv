@@ -1,4 +1,7 @@
 @import url('./fonts.css');
+html{
+    overflow-x: hidden;
+}
 body{
     margin: 0px;
     height: 12000px;
@@ -7,12 +10,12 @@ body{
     background-size: contain;
     transition: .3s;
     color: #aaac9c;
-    background-attachment: scroll;
+    overflow-x: hidden;
 }
 .header{
     position: fixed;
     z-index: 5;
-    width: 100%;
+    width: 100vw;
     height: 100px;
     border-bottom: 3px solid #aaac9c;
     backdrop-filter: blur(10px);
@@ -92,14 +95,14 @@ a{
     background-clip: text;
     animation: back-text 5s infinite linear;
     text-align: left;
-    opacity: 0;
+    visibility: hidden;
     transform: translateX(-400px);
     transition: 1s;
 }
 .main__image{
     width: 300px;
     height: 297px;
-    opacity: 0;
+    visibility: hidden;
     transition: 1s;
     transform: translateX(400px);
     filter: opacity(60%);
@@ -115,13 +118,13 @@ a{
     animation-duration: 1s;
     animation-iteration-count: infinite;
 }
-.main__title__active{
-    opacity: 1;
+.main__title.anim-item.active{
+    visibility: visible;
     transform: translateX(0px);
     transition: 1s;
 }
-.main__image__active{
-    opacity: 1;
+.main__image.anim-item.active{
+    visibility: visible;
     transform: translateX(0px);
     transition: 1s;
 }
@@ -200,7 +203,8 @@ a{
 @media (max-width: 500px){
     .nav{
         width: 100%;
-        position: fixed;
+        position: absolute;
+        visibility: hidden;
         top: calc(51px + (62.25 - 51) * ((100vw - 320px) / (500 - 320)));
         left: 100%;
         flex-direction: column;
@@ -286,6 +290,7 @@ a{
     .nav__active{
         transition: .3s;
         left: 0%;
+        visibility: visible;
     }
     //js
 }
