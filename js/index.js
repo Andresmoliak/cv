@@ -7,7 +7,7 @@ const src = './audio/MACAN - Кино(минус) (mp3-2020.com).mp3'
 const body = document.querySelector('body')
 const nav = document.querySelector('.nav')
 const burgerBut = document.querySelector('.header__burger') 
-//for animation on scroll
+//for scroll
 const animItems = Array.from(document.querySelectorAll('.anim-item'))
 
 window.onload = function (){
@@ -48,33 +48,33 @@ burgerBut.addEventListener('click', ()=>{
   burgerBut.classList.toggle('burger__active')
   nav.classList.toggle('nav__active')
 })
-
-//animation on scroll
+//scroll
 if (animItems.length > 0){
   window.addEventListener('scroll', animOnScroll)
-  function animOnScroll(){
-    for (let index = 0; index < animItems.length; index++) {
+  function animOnScroll(){  
+  for (let index = 0; index < animItems.length; index++) {
       const animItem = animItems[index];
-      const animItemHeight = animItem.offsetHeight
+      const animitemHeight = animItem.offsetHeight
       const animItemOffset = offset(animItem).top
       const animStart = 4
-
-      let animItemPoint = window.innerHeight - animItemHeight / animStart
-      if(animItemHeight > window.innerHeight){
-        animItemPoint = window.innerHeight - window.innerHeight / animStart
+  
+   let animItemPoint = window.innerHeight - animitemHeight / animStart
+     if(animitemHeight > window.innerHeight){
+       animItemPoint = window.innerHeight - window.innerHeight / animStart
       }
-      if((pageYOffset > animItemOffset - animItemPoint) && pageYOffset < (animItemOffset + animItemHeight)){
-        animItem.classList.add('active')
+  
+      if ((pageYOffset > animItemOffset - animItemPoint) && pageYOffset < (animItemOffset + animitemHeight)){
+          animItem.classList.add('active')
       } else {
         animItem.classList.remove('active')
       }
     }
-  }
+ }
   function offset (el){
-    const rect = el.getBoundingClientRect(),
-        scrollLeft = window.pageXOffset || document.documentElement.scrollLeft, 
-        scrollTop = window.pageYOffset || document.documentElement.scrollTop
-    return { top: rect.top + scrollTop, left: rect.left + scrollLeft}
+   const rect = el.getBoundingClientRect(),
+    scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+    scrollTop =  window.pageYOffset || document.documentElement.scrollTop
+    return {top: rect.top + scrollTop, left: rect.left + scrollLeft}
   }
   animOnScroll()
 }
