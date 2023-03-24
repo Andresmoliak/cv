@@ -150,8 +150,7 @@ transition: .5s;
     color: #aaac9c;
   text-shadow:
       0 0 7px #7ce7b9,
-      0 0 42px #7ce7b9,
-      0 0 82px #7ce7b9,;
+      0 0 15px #7ce7b9;
     height: max-content;
     text-align: center;
 }
@@ -162,10 +161,7 @@ transition: .5s;
     font-family: 'heading600';
     font-size: 80px; 
     color: #aaac9c;
-  text-shadow:
-      0 0 7px #7ce7b9,
-      0 0 15px #7ce7b9, 
-      0 0 25px #7ce7b9;
+    text-shadow: 0 0 5px #7ce7b9;
 
 }
 //animations
@@ -220,10 +216,6 @@ transition: .5s;
     }
     .about__title{
         font-size: calc(30px + (90 + 90 * 0.7) * (100vw - 320px) / 1150);
-        text-shadow: 
-        0 0 7px #7ce7b9,
-        0 0 calc(20px + (42 - 20) * ((100vw - 320px) / (1310 - 320))),
-        0 0 calc(0px + (82 - 0) * (100vw - 320px) / (1310 - 320));
     }
     .about{
         margin-top: calc(50px + (250 - 50) * ((100vw - 320px) / (1150 - 320)));
