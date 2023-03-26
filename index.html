@@ -16,9 +16,9 @@
                     <img src="./svg/play-button.png" alt="music">
                 </div>
                 <nav class="nav">
-                   <a href="#">Main</a>
+                   <a id="main" href="#">Main</a>
                    <a href="#">About</a>
-                   <a href="#">Abilities</a>
+                   <a href="#">Skills</a>
                    <a href="#">Projects</a>
                    <a href="#">Contacts</a>
                 </nav>
@@ -40,7 +40,71 @@
         <div class="about">
             <div class="about__wrapper">
                 <div class="about__title">Let's meet</div>
-                <div class="about__tell">Hi, I'm Andrey Smolyak. About six months ago I started doing web development and fell in love with this business. I think that the main advantage of the developer is the quality combined with speed and I can definitely provide it. Below you can see my projects, learn about my skills and write to me. I will be glad to cooperate!</div>
+                <div class="about__tell anim-item">Hi, I'm Andrey Smolyak. About six months ago I started doing web development and fell in love with this business. I think that the main advantage of the developer is the quality combined with speed and I can definitely provide it. Below you can see my projects, learn about my skills and write to me. I will be glad to cooperate!</div>
+            </div>
+        </div>
+        <div class="skills">
+            <div class="skills__wrapper">
+                <div class="skills__title">Skills</div>
+                <div class="skills__main">
+                    <div class="skills__sign">
+                        <div class="skills__sign__time"></div>
+                        <div class="skills__sign__sign">Every second I can do more and more!</div>
+                        <div class="skills__hint">*Сlick on images to learn more*</div>
+                    </div>
+                    <div class="skills__images">
+                        <div class="skills__images__image html">
+                            <img src="./images/Html.png" alt="Html">
+                        </div>
+                        <div class="skills__images__image css">
+                            <img src="./images/css.png" alt="Css">
+                        </div>
+                        <div class="skills__images__image js">
+                            <img src="./images/Js.png" alt="Js">
+                        </div>
+                        <div class="skills__images__image scss">
+                            <img src="./images/scss.png" alt="Scss">
+                        </div>
+                        <div class="skills__images__image jquery">
+                            <img src="./images/jquery.png" alt="Jquery">
+                        </div>
+                        <div class="skills__images__image php">
+                            <img src="./images/php.png" alt="PHP">
+                        </div>
+                   </div>
+                   <div class="skills__modal"></div>
+                    <div class="skills__modal__content">
+                        <div class="modal__content__wrapper">
+                            <div class="modal__content__header">
+                                <div class="modal__header__logo"></div>
+                                <div class="modal__header__title"></div>
+                                <div class="close">&times;</div>
+                            </div>
+                            <div class="modal__content__text"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="projects">
+            <div class="projects__wrapper">
+                <div class="projects__title">Projects here!</div>
+                <div class="projects__projects">
+                    <div class="projects__projects__project">
+                        <a target="_blank" href="https://andresmoliak.github.io/momentum/" class="projects__project__link">
+                            <img src="./images/momentum.png" alt="project">
+                        </a>
+                    </div>
+                    <div class="projects__projects__project">
+                        <a target="_blank" href="https://andresmoliak.github.io/tennisClub/" class="projects__project__link">
+                            <img src="./images/tennis.png" alt="project">
+                        </a>
+                    </div>
+                </div>
+                <div class="projects__hints">
+                    <div class="projects__hints__hint">Click and see!</div>
+                    <div class="projects__hints__hint">Click and see!</div>
+                </div>
             </div>
         </div>
         <script src="./js/index.js" async defer></script>

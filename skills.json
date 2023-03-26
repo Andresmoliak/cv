@@ -1,0 +1,32 @@
+[
+    {
+        "logo":"./images/Html.png",
+        "name":"Html",
+        "text":"I know Html almost perfectly. I can quickly build the right structure, creating fully readable code. I own BEM. Semantic layout is also in my skills." 
+    },
+    {
+        "logo":"./images/css.png",
+        "name":"Css",
+        "text":"I can create any effects, animations, transitions, and so on. I make up on flex, if desired, I also know the grid. No problems with cross-browser compatibility. I can make pixel perfect layout without any problems. I work on the principle that I can't know everything, but I will find out if I need to." 
+    },
+    {
+        "logo":"./images/Js.png",
+        "name":"JavaScript", 
+        "text":"I can create almost any things. Starting from a simple burger menu and ending with scrolling animation or creating an audio playlist.I regularly improve my skills by solving problems in code wars. If there is any problem, it will not be difficult to find a solution. Also, working with me, you can forget about optimization problems."
+    },
+    {
+        "logo":"./images/scss.png",
+        "name":"Sass/Scss",
+        "text":"Mixins, variables, nesting, various mathematical calculations are all that we know about preprocessors and I know and apply all this in practice, thereby speeding up and making my work even more enjoyable."
+    },
+    {
+        "logo":"./images/jquery.png",
+        "name":"Jquery",
+        "text":"Some people think that Jquery is already outdated and, in fact, we can agree with this statement, since I often prefer vanilla js myself, but despite all this, a huge number of plugins for Jquery allow it to remain in demand, and I simplify my work even more."
+    },
+    {
+        "logo":"./images/php.png",
+        "name":"PHP",
+        "text":"Not to say that I know php perfectly well, but my knowledge is more than enough for layout. To send a form or, for example, to assemble a complex multi-page website will not make me any difficulties. So I boldly write php to the list of my skills."
+    }
+]

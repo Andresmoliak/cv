@@ -9,6 +9,12 @@ const nav = document.querySelector('.nav')
 const burgerBut = document.querySelector('.header__burger') 
 //for scroll
 const animItems = Array.from(document.querySelectorAll('.anim-item'))
+//for modal
+const modalBlack = document.querySelector('.skills__modal')
+const modalWindow = document.querySelector('.skills__modal__content')
+const logos = Array.from(document.querySelectorAll('.skills__images__image'))
+const header = document.querySelector('.header')
+const buttonClose = document.querySelector('.close')
 
 window.onload = function (){
     localStorage.clear()
@@ -77,4 +83,54 @@ if (animItems.length > 0){
     return {top: rect.top + scrollTop, left: rect.left + scrollLeft}
   }
   animOnScroll()
+}
+
+//modal window
+//take json
+function add (){
+  logos.forEach((el) =>{
+    el.addEventListener('click', () => {
+      const index = logos.indexOf(el)
+      async function addJson () {
+      const src = 'skills.json'
+      const ready = await fetch(src)
+      const skills = await ready.json()
+      console.log(skills)
+      document.querySelector('.modal__header__title').innerHTML = skills[index].name
+      document.querySelector('.modal__content__text').innerHTML = skills[index].text
+      document.querySelector('.modal__header__logo').innerHTML = `<img src="${skills[index].logo}" alt="logo">`
+      }
+      addJson()
+  modalBlack.classList.add('active')
+  modalWindow.classList.add('active')
+  body.classList.add('locked')
+  header.classList.add('modal') 
+    })
+  })
+}
+add()
+
+function close (){
+  modalBlack.classList.remove('active')
+  modalWindow.classList.remove('active')
+  body.classList.remove('locked')
+  header.classList.remove('modal')
+}
+
+modalBlack.addEventListener('click', close)
+buttonClose.addEventListener('click', close)
+
+//time
+
+window.onload = function time (){
+  setInterval(() => {
+    const date = new Date()
+    let hours
+    let minutes
+    let seconds 
+    if(date.getHours() < 10){hours = `0${date.getHours()}`} else {hours = date.getHours()}
+    if(date.getMinutes() < 10){minutes = `0${date.getMinutes()}`} else {minutes = date.getMinutes()}
+    if(date.getSeconds() < 10){seconds = `0${date.getSeconds()}`} else {seconds = date.getSeconds()}
+    document.querySelector('.skills__sign__time').innerHTML = `${hours}:${minutes}:${seconds}`
+  }, 1000)
 }
