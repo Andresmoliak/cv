@@ -4,7 +4,7 @@ const audioButton = document.querySelector('.audio__button')
 const audio = new Audio()
 const src = './audio/MACAN - Кино(минус) (mp3-2020.com).mp3'
 //for burger
-const body = document.querySelector('body')
+const html = document.querySelector('html')
 const nav = document.querySelector('.nav')
 const burgerBut = document.querySelector('.header__burger') 
 //for scroll
@@ -50,7 +50,7 @@ audio.addEventListener('ended', function (){
 
 //burger
 burgerBut.addEventListener('click', ()=>{
-  body.classList.toggle('locked')
+  html.classList.toggle('locked')
   burgerBut.classList.toggle('burger__active')
   nav.classList.toggle('nav__active')
 })
@@ -103,7 +103,7 @@ function add (){
       addJson()
   modalBlack.classList.add('active')
   modalWindow.classList.add('active')
-  body.classList.add('locked')
+  html.classList.add('locked')
   header.classList.add('modal') 
     })
   })
@@ -113,7 +113,7 @@ add()
 function close (){
   modalBlack.classList.remove('active')
   modalWindow.classList.remove('active')
-  body.classList.remove('locked')
+  html.classList.remove('locked')
   header.classList.remove('modal')
 }
 
@@ -134,3 +134,5 @@ window.onload = function time (){
     document.querySelector('.skills__sign__time').innerHTML = `${hours}:${minutes}:${seconds}`
   }, 1000)
 }
+
+          
