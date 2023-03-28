@@ -85,6 +85,7 @@ if (animItems.length > 0){
   animOnScroll()
 }
 
+
 //modal window
 //take json
 function add (){
