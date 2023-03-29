@@ -7,6 +7,7 @@ const src = './audio/MACAN - Кино(минус) (mp3-2020.com).mp3'
 const html = document.querySelector('html')
 const nav = document.querySelector('.nav')
 const burgerBut = document.querySelector('.header__burger') 
+const links = Array.from(document.querySelectorAll('.nav a'))
 //for scroll
 const animItems = Array.from(document.querySelectorAll('.anim-item'))
 //for modal
@@ -59,6 +60,13 @@ burgerBut.addEventListener('click', ()=>{
   html.classList.toggle('locked')
   burgerBut.classList.toggle('burger__active')
   nav.classList.toggle('nav__active')
+})
+
+links.forEach((el) => {
+  el.addEventListener('click', () => {
+  burgerBut.classList.toggle('burger__active')
+  nav.classList.toggle('nav__active')
+  })
 })
 //scroll
 if (animItems.length > 0){
