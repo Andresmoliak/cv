@@ -133,12 +133,12 @@ window.onload = function time (){
   setInterval(() => {
     const date = new Date()
     let hours
-    let minutes
+    let minute
     let seconds 
     if(date.getHours() < 10){hours = `0${date.getHours()}`} else {hours = date.getHours()}
-    if(date.getMinutes() < 10){minutes = `0${date.getMinutes()}`} else {minutes = date.getMinutes()}
+    if(date.getMinutes() < 10){minute = `0${date.getMinutes()}`} else {minute = date.getMinutes()}
     if(date.getSeconds() < 10){seconds = `0${date.getSeconds()}`} else {seconds = date.getSeconds()}
-    document.querySelector('.skills__sign__time').innerHTML = `${hours}:${minutes}:${seconds}`
+    document.querySelector('.skills__sign__time').innerHTML = `${hours}:${minute}:${seconds}`
   }, 1000)
 }
 
