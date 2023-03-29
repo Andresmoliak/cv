@@ -15,6 +15,12 @@ const modalWindow = document.querySelector('.skills__modal__content')
 const logos = Array.from(document.querySelectorAll('.skills__images__image'))
 const header = document.querySelector('.header')
 const buttonClose = document.querySelector('.close')
+// for accordion
+const accordButton = document.querySelector('.footer__contacts__sign')
+const accordPhone = document.querySelector('.footer__contacts__phone')
+const accordSocial = document.querySelector('.footer__contacts__social')
+const footer = document.querySelector('.footer')
+const after = document.querySelector('.contacts__sign__sign')
 
 window.onload = function (){
     localStorage.clear()
@@ -136,4 +142,10 @@ window.onload = function time (){
   }, 1000)
 }
 
-          
+//accordion 
+accordButton.addEventListener('click', () => {
+  accordPhone.classList.toggle('active')
+  footer.classList.toggle('active')
+  accordSocial.classList.toggle('active')
+  after.classList.toggle('active')
+})
